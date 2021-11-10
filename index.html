@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Balloons</title>
+</head>
+<body>
+    <!--
+        网页基本结构：(1) 底部计数 (2) 每一个气球的容器 (3) 失败界面 (4) 成功界面
+    -->
+
+	<div class="score-block">
+		<p>已经打破 <span class="score">0</span> 个气球</p>
+	</div>
+
+	<div class="total-shadow">
+		<div class="total-block">
+			<div class="total-wrapper win">
+				<h4>挑战成功</h4>
+				<img src="images/happy.png" alt="Winner">
+				<h4>您打破了 100 个气球~~~</h4>
+				<p>您真是个强者！</p>
+			</div>
+
+			<div class="total-wrapper lose">
+				<h4>挑战失败</h4>
+				<img src="images/sad.png" alt="Loser">
+				<h4>您打破了 <span class="score">0</span> 个气球</h4>
+				<p>再挑战一次吧~~~</p>
+				<button class="restart">Yes</button>
+				<button class="cancel">No</button>
+			</div>
+		</div>
+	</div>
+	
+	<!--点击 Start 开始游戏（播放被浏览器屏蔽的 BGM）-->
+	<div class="start-game">
+		<h2>挑战打破 100 个气球吧！</h2>
+		<button class="start-btn">开始游戏</button>
+	</div>
+
+	<!--部分浏览器会阻止隐藏 audio 的播放-->
+	<audio src="sounds/bg-music.mp3" loop class="bgm"></audio>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

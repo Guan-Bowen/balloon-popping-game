@@ -1,0 +1,77 @@
+body{
+    /* 如果元素的位置超出了范围，则忽略该元素 */
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+}
+.balloon{
+    width: 100px;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* 隐藏气球 -- 向下移动一个屏幕的宽度（100% 不起作用）*/
+    position: absolute;
+    top: 100vh;
+}
+.balloon-red{
+    background-image: url(../images/balloon-red.png);
+}
+.balloon-yellow{
+    background-image: url(../images/balloon-yellow.png);
+}
+.balloon-violet{
+    background-image: url(../images/balloon-violet.png);
+}
+.balloon-blue{
+    background-image: url(../images/balloon-blue.png);
+}
+.balloon-green{
+    background-image: url(../images/balloon-green.png);
+}
+
+.score-block{
+    background-color: #efefef;
+    width: 300px;
+    height: 80px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px 20px 0 0;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 150px);
+}
+.total-shadow{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    /* z-index 属性不能用于 static，应当将容器设置为 relative */
+    position: relative;
+    z-index: 100;
+}
+.total-block{
+    background-color: #fff;
+    padding: 10px 80px 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+.win, .lose{
+    display: none;
+}
+
+.start-game{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+}
